@@ -1,3 +1,4 @@
+import sys, pathlib; sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import os, yaml, random
 import numpy as np
 import torch, torch.nn as nn
