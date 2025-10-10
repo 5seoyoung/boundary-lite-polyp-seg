@@ -1,0 +1,11 @@
+root: ./data
+kvasir:
+  path: ${root}/Kvasir-SEG
+cvc:
+  path: ${root}/CVC-ClinicDB
+
+splits:
+  setting: A   # A: Kvasir->CVC, B: CVC->Kvasir, C: in-domain
+  val_ratio: 0.1
+  seed: 42
+img_size: [256, 256]
