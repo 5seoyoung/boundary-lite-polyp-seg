@@ -1,0 +1,22 @@
+model: unet_tiny
+in_channels: 3
+num_classes: 1
+
+optimizer:
+  name: adamw
+  lr: 3.0e-4
+  weight_decay: 1.0e-4
+
+scheduler:
+  name: onecycle
+  max_epochs: 80
+  batch_size: 16
+
+loss:
+  lambda_r: 1.0   # baseline: Dice+BCE only
+  lambda_b: 0.0
+  lambda_u: 0.0
+
+device: auto   # auto: mps->cuda->cpu
+mixed_precision: true
+out_dir: ./outputs/baseline
