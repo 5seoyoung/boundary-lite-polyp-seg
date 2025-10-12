@@ -1,0 +1,29 @@
+# 경계-의식 손실(Region 가중 + BIoU) 설정
+in_channels: 3
+num_classes: 1
+
+# 손실 가중
+lambda_r: 0.6     # region (edge-weighted Dice+BCE)
+lambda_b: 0.25    # BIoU
+lambda_u: 0.15    # (reserved; 미사용)
+
+region:
+  alpha: 2.0
+  sigma: 3.0
+  dice_weight: 0.5
+  bce_weight: 0.5
+
+biou:
+  delta: 3
+
+# 학습 스케줄(베이스라인과 동일)
+epochs: 80
+lr: 0.0003
+weight_decay: 0.0001
+batch_size: 16
+
+# (옵션) 간단 증강 사용 여부
+augment: false   # 도메인 쉬프트 대응이 필요하면 true로
+
+out_dir: outputs/boundary_biou_run2
+augment: false   # (현 런 유지 시)

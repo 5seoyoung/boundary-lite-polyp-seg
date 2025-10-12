@@ -1,0 +1,10 @@
+out_dir: outputs/boundary_biou_v2
+lambda_r: 0.7
+lambda_b: 0.15
+region: {alpha: 1.5, sigma: 4.0, dice_weight: 0.5, bce_weight: 0.5}
+biou:   {delta: 2}
+augment: true
+epochs: 80
+batch_size: 16
+lr: 0.0003
+weight_decay: 0.0001
