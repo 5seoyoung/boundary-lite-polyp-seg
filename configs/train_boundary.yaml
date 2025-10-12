@@ -1,0 +1,21 @@
+in_channels: 3
+num_classes: 1
+
+lambda_r: 0.6   # region (weighted Dice+BCE)
+lambda_b: 0.25  # BIoU
+lambda_u: 0.15  # (reserved; not used now)
+
+region:
+  alpha: 2.0
+  sigma: 3.0
+  dice_weight: 0.5
+  bce_weight: 0.5
+
+biou:
+  delta: 3
+
+# same schedule as baseline
+epochs: 80
+lr: 0.0003
+weight_decay: 0.0001
+batch_size: 16
