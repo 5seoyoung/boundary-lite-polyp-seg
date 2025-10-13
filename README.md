@@ -1,7 +1,6 @@
 # Boundary-Lite Polyp Segmentation (Kvasir-SEG ↔ CVC-ClinicDB)
 
 경량 U-Net-tiny(≈0.118M params) 기반으로 **경계-의식(Region+Boundary) 손실**과 **고정 임계값 평가**를 통해 **도메인 간(내시경 기기/분포) 강건성**을 실험합니다.
-트랙: *Segmentation, Transparency/Ethics, AI for Image Analysis*
 
 ---
 
@@ -134,8 +133,6 @@ w_i = 1 + \alpha \exp\!\bigl(- (d_i/\sigma)^2\bigr)
 
 * (p_i): 예측 확률, (y_i): GT 라벨, (w_i): 경계 가중, (\epsilon): 수치 안정화 상수
 * (\lambda_r, \lambda_b): 손실 가중 (예: (\lambda_r{=}0.6,\ \lambda_b{=}0.25))
-* 필요 시 불확실성/드롭아웃 항 (\lambda_u \mathcal{L}_u)를 뒤에 덧붙이면 확장 버전도 바로 쓸 수 있어.
-
 
 * **Region 가중**: 거리변환 기반 경계 가중 `W_edge = 1 + α exp(-(d/σ)^2)` (기본 `α=2.0, σ=3px`)
 * **BIoU(δ=3px)**: 마스크 팽창-침식 경계밴드에서 IoU 최적화
