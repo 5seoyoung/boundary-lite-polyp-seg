@@ -5,6 +5,7 @@ def _dilate(x, k):  return F.max_pool2d(x, kernel_size=2*k+1, stride=1, padding=
 def _erode(x, k):   return -F.max_pool2d(-x, kernel_size=2*k+1, stride=1, padding=k)
 
 def boundary_band(x, delta=3):
+    # x: (B,1,H,W), [0..1]
     dil = _dilate(x, delta)
     ero = _erode(x, delta)
     return (dil - ero).clamp(0.0, 1.0)     # [0,1]
