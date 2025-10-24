@@ -4,6 +4,10 @@ import cv2
 import numpy as np
 
 def _distance_to_edge(mask_np: np.ndarray) -> np.ndarray:
+    """
+    입력: mask_np (HxW, {0,255})
+    출력: 경계까지의 거리 (float32)
+    """
     m = (mask_np > 0).astype(np.uint8)
     kernel = np.ones((3,3), np.uint8)
     dil = cv2.dilate(m, kernel, iterations=1)
@@ -14,6 +18,10 @@ def _distance_to_edge(mask_np: np.ndarray) -> np.ndarray:
     return dist.astype(np.float32)
 
 def make_edge_weight(gt_mask: torch.Tensor, alpha=2.0, sigma=3.0) -> torch.Tensor:
+    """
+    gt_mask: (B,1,H,W), {0,1}
+    W_edge = 1 + alpha * exp(-(d/sigma)^2)
+    """
     B, _, H, W = gt_mask.shape
     weights = []
     for b in range(B):
@@ -35,7 +43,7 @@ def dice_loss(logits: torch.Tensor, gt: torch.Tensor, weight: torch.Tensor=None,
     return 1.0 - dice.mean()
 
 def bce_loss(logits: torch.Tensor, gt: torch.Tensor, weight: torch.Tensor=None):
-    return torch.nn.functional.binary_cross_entropy_with_logits(logits, gt, weight=weight)
+    return F.binary_cross_entropy_with_logits(logits, gt, weight=weight)
 
 def region_weighted_loss(logits, gt, alpha=2.0, sigma=3.0, lambda_dice=0.5, lambda_bce=0.5):
     W = make_edge_weight(gt, alpha=alpha, sigma=sigma)
