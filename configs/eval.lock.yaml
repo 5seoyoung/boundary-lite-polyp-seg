@@ -1,0 +1,5 @@
+setting: A
+img_size: [256, 256]
+preproc: none
+device: mps
+test_name: CVC-ClinicDB
