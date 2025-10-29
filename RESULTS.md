@@ -31,4 +31,75 @@ tau=0.50  Dice=0.007454
 IoU=0.003862
 N=612
 
-A-2 tau=0.25  A-2 tau=0.30  A-2 tau=0.35  A-2 tau=0.40  A-2 tau=0.45  A-2 tau=0.50  
+A-2 tau=0.25  A-2 tau=0.30  A-2 tau=0.35  A-2 tau=0.40  A-2 tau=0.45  A-2 tau=0.50  A-2 tau=0.25  A-2 tau=0.30  A-2 tau=0.35  A-2 tau=0.40  A-2 tau=0.45  A-2 tau=0.50  LOCK2 tau=0.20  Dice=0.029454
+IoU=0.016129
+N=612
+LOCK2 tau=0.25  Dice=0.020907
+IoU=0.011210
+N=612
+LOCK2 tau=0.30  Dice=0.015580
+IoU=0.008247
+N=612
+LOCK2 tau=0.35  Dice=0.012225
+IoU=0.006417
+N=612
+LOCK2 tau=0.40  Dice=0.009996
+IoU=0.005214
+N=612
+LOCK2 tau=0.45  Dice=0.008562
+IoU=0.004450
+N=612
+LOCK2 tau=0.50  Dice=0.007454
+IoU=0.003862
+N=612
+A-2 tau=0.25  A-2 tau=0.30  A-2 tau=0.35  A-2 tau=0.40  A-2 tau=0.45  A-2 tau=0.50  LOCK2 tau=0.20  Dice=0.029454
+IoU=0.016129
+N=612
+LOCK2 tau=0.25  Dice=0.020907
+IoU=0.011210
+N=612
+LOCK2 tau=0.30  Dice=0.015580
+IoU=0.008247
+N=612
+LOCK2 tau=0.35  Dice=0.012225
+IoU=0.006417
+N=612
+LOCK2 tau=0.40  Dice=0.009996
+IoU=0.005214
+N=612
+LOCK2 tau=0.45  Dice=0.008562
+IoU=0.004450
+N=612
+LOCK2 tau=0.50  Dice=0.007454
+IoU=0.003862
+N=612
+A-2 τ=0.25  A-2 τ=0.30  A-2 τ=0.35  A-2 τ=0.40  A-2 τ=0.45  A-2 τ=0.50  A-3 τ=0.25  Dice=0.020907
+IoU=0.011210
+N=612
+A-3 τ=0.30  Dice=0.015580
+IoU=0.008247
+N=612
+A-3 τ=0.35  Dice=0.012225
+IoU=0.006417
+N=612
+A-3 τ=0.40  Dice=0.009996
+IoU=0.005214
+N=612
+A-3 τ=0.45  Dice=0.008562
+IoU=0.004450
+N=612
+A-3 τ=0.50  Dice=0.007454
+IoU=0.003862
+N=612
+A-4 τ=0.25  A-4 τ=0.30  A-4 τ=0.35  A-4 τ=0.40  A-4 τ=0.45  A-4 τ=0.50  A-2 τ=0.25  A-2 τ=0.30  A-2 τ=0.35  A-2 τ=0.40  A-2 τ=0.45  A-2 τ=0.50  A-2 τ=0.25  metrics.txt missing
+A-2 τ=0.30  metrics.txt missing
+A-2 τ=0.35  metrics.txt missing
+A-2 τ=0.40  metrics.txt missing
+A-2 τ=0.45  metrics.txt missing
+A-2 τ=0.50  metrics.txt missing
+A-2 τ=0.25  metrics.txt missing
+A-2 τ=0.30  metrics.txt missing
+A-2 τ=0.35  metrics.txt missing
+A-2 τ=0.40  metrics.txt missing
+A-2 τ=0.45  metrics.txt missing
+A-2 τ=0.50  metrics.txt missing
